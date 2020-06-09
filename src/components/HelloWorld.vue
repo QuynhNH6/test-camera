@@ -2,6 +2,7 @@
 	<div class="hello">
 		<h1>{{ msg }}</h1>
 		<video class="camera__view" autoplay playsinline></video>
+
 	</div>
 </template>
 
@@ -27,7 +28,7 @@
 		},
 		mounted() {
 			this.cameraView = document.querySelector('video');
-			this.frameSize = this.calculateSquare();
+			// this.frameSize = this.calculateSquare();
 			this.openCamera();
 		},
 		methods: {
@@ -37,8 +38,8 @@
 					// console.log('--- openCamera ---');
 					const constraints = {
 						audio: false,
-						// video: { facingMode: "user" }
-						video: {facingMode: {exact: 'environment'}}
+						video: { facingMode: "user" }
+						// video: {facingMode: {exact: 'environment'}}
 					};
 					stream = await navigator.mediaDevices.getUserMedia(constraints);
 					this.stream = stream;
@@ -46,7 +47,6 @@
 				} catch (e) {
 					console.error('Oops. Something is broken.', e);
 				}
-
 			}
 		}
 	};
