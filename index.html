@@ -17,6 +17,7 @@
 <div>
 	<button onclick="openTest()">click _system</button>
 	<button onclick="openBlank()">click _blank</button>
+	<button onclick="navigatorLoadUrl()">navigatorLoadUrl</button>
 	<a href="goto://DeviceBrowser?url=https://www.google.com">Google External App</a>
 </div>
 <div id=app>
@@ -30,6 +31,9 @@
 
 	function openBlank() {
 		window.open('https://www.24h.com.vn', '_blank');
+	}
+	function navigatorLoadUrl() {
+		navigator.app.loadUrl('https://google.com/', { openExternal:true });
 	}
 </script>
 </body>
