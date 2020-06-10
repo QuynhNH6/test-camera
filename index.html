@@ -14,13 +14,21 @@
 <body>
 <noscript><strong>We're sorry but test-camera doesn't work properly without JavaScript enabled. Please enable it to
 	continue.</strong></noscript>
-<div id=app></div>
-<button onclick="openTest()">click here</button>
+<div>
+	<button onclick="openTest()">click _system</button>
+	<button onclick="openBlank()">click _blank</button>
+</div>
+<div id=app>
+</div>
 <script src=./js/chunk-vendors.bd47a887.js></script>
 <script src=./js/app.4c689ac4.js></script>
 <script>
 	function openTest() {
 		window.open('https://www.google.com', '_system');
+	}
+
+	function openBlank() {
+		window.open('https://www.24h.com.vn', '_blank');
 	}
 </script>
 </body>
